@@ -76,8 +76,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(dogAge){
+  return dogAge * 7;  
 }
 
 
@@ -136,9 +136,27 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+// let computer = Math.random();
+// if(computer<=0.33){
+//   computer = 'rock';
+// }else if (computer <=0.67){
+//   computer = 'paper';
+// }else (computer > 0.67)
+//   computer = 'scissors';
+ 
+
 function game(user, computer){
-  /*add your code here*/
+  if(user ===computer){
+    return `it's a tie`;
+  }else if(user === `rock` && computer === `scissors`){
+    return `you win!`;
+  } else if(user === `paper` && computer === `rock`){
+    return `you win!`;
+  }else if(user === `scissors` && computer === `paper`){
+    return `you win!`;
+  }else `you lose!`
 }
+console.log(`task4`, game(`rock`, `computer`));
 
 
 
@@ -153,9 +171,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
+console.log(miles())
 
 
 
@@ -183,9 +202,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+function annoyingSong(){
+//   for(let i = number; i > 0; i--){
+//     // return number + "bottle of soda"
+//     return `${number} bottles of soda on the wall, ${i} bottles of soda, takes one pass it around ${number - 1} bottles of soda on the wall`;
+//   }
+// }
+console.log(`task6`, annoyingSong(99));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -203,10 +226,13 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(){
+// if(mark>=90){
+//   return `A`;
+// }else if (mark<=89 || mark >=80){
+//   return`B`;
+// }else if (mark)
 }
-
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
