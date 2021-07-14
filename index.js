@@ -217,7 +217,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm * 0.0328084;
+  return cm / 30.48;
 }
 console.log(`Task 5b`, feet())
 
@@ -283,7 +283,7 @@ HINT - try looking up the .includes() method
 */
 
 // let letter = [A, a, E, e, I, i, O, o, U, u]
-function vowelCounter() {
+// function vowelCounter() {
 //   const myArr = strVowelNum.split(""); 
 //   for (i=0, i<= strVowelNum.length, i++){
 //   return 
@@ -308,5 +308,5 @@ module.exports = {
   feet,
   annoyingSong,
   
-  grade
-}
+  grade,
+ }
