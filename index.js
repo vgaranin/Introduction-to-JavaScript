@@ -36,14 +36,13 @@ Do the following:
 
    HINT: no function required
 */
-let  number1 = 10;
-let number2 = 20;
-function changeNumber() {
-  if(number1 < number2) {
-    return number1 + 10;
-  }
+let sky = "blue";
+let weather = "sunny";
+if(weather === "sunny"){
+  sky="lightBlue";
+}  else{ sky = "blue";
 }
-console.log(`task1b`, changeNumber())
+console.log(`task1b`, sky)
 
 
 
@@ -286,9 +285,8 @@ HINT - try looking up the .includes() method
 // let letter = [A, a, E, e, I, i, O, o, U, u]
 function vowelCounter() {
 //   const myArr = strVowelNum.split(""); 
-//   for (i=0, i<= strVowelNum.length, i++)
+//   for (i=0, i<= strVowelNum.length, i++){
 //   return 
-}
 // console.log(vowelCounter())
 
 
@@ -309,5 +307,6 @@ module.exports = {
   miles,
   feet,
   annoyingSong,
+  
   grade
 }
