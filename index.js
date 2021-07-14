@@ -120,28 +120,27 @@ Puppies less than 1 year
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-// let dogWeight = 0;
-// let dogAge = 0;
+
 function hungryDog(dogWeight, dogAge){
-  if (dogAge >1){
+  if (dogAge >= 1){
     if (dogWeight <= 5){
       return  dogWeight *0.05;
-    } if (dogWeight <= 6 && dogWeight <= 10){
+    } if (dogWeight >= 6 && dogWeight <= 10){
       return dogWeight * 0.04;
-    } if (dogWeight <= 11 && dogWeight <=15){
+    } if (dogWeight >= 11 && dogWeight <=15){
       return dogWeight * 0.03;
     } if (dogWeight >= 15){
       return dogWeight * 0.02;
     }
-  } else if(dogAge <= 1/6 && dogAge <= 1/3){
+  } else if(dogAge >= 0.166 && dogAge <= 0.33){
     return dogWeight * 0.1;
-  } if(dogAge < 1/3 && dogAge < 7/12){
+  } if(dogAge > 0.33 && dogAge <0.583){
     return dogWeight * 0.05;
-  } if(dogAge <= 7/12 && dogAge < 1){
+  } if(dogAge >= 0.583 && dogAge < 1){
     return dogWeight * 0.04;
   } 
 }
-  console.log(`Task 3`, "lbs" (15, 1));
+  console.log(`Task 3`, hungryDog(15, 1), `lbs`);
 
 
 
@@ -168,15 +167,15 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 let computer = Math.random();
-if(computer<=0.33){
+if(computer <= 0.33){
   computer = 'rock';
-}else if (computer <=0.67){
+}else if (computer <= 0.67){
   computer = 'paper';
 }else (computer > 0.67)
   computer = 'scissors';
  
 function game(user, computer){
-  if(user ===computer){
+  if(user === computer){
     return `it's a tie`;
   }else if(user === `rock` && computer === `scissors`){
     return `you win!`;
@@ -186,7 +185,7 @@ function game(user, computer){
     return `you win!`;
   }else `you lose!`
 }
-console.log(`task4`, game(`rock`, `computer`));
+console.log(`task4`, game(`rock`, computer));
 
 
 
@@ -235,10 +234,10 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
   for(let i = number; i > 0; i--){
-    return `${i} bottles of soda on the wall, ${i} bottles of soda, takes one pass it around ${i- 1} bottles of soda on the wall`;
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i- 1} bottles of soda on the wall`;
   }
 }
-console.log(`task6`, annoyingSong(99));
+console.log(`task6`, annoyingSong());
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -257,17 +256,17 @@ Using the grade function below do the following:
 */
 
 function grade(mark){
-if(mark>=90){
-  return 'you got an A';
-}else if (mark<=89 || mark >=80){
-  return 'you got a B';
-}else if (mark >= 70 || mark <= 79){
-  return 'you got a C';
-}else if(mark >= 60 || mark <= 69){
-  return 'you got a D';
-} else return 'you got an F'
-}
-console.log(`task7`, grade());
+  if(mark >= 90){
+    return 'you got an A';
+  }else if(mark >= 80){
+    return 'you got a B';
+  }else if(mark >= 70){
+    return 'you got a C';
+  }else if(mark >= 60){
+    return 'you got a D';
+  } else return 'you got an F'
+  }
+  console.log(`task7`, grade());
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -282,13 +281,13 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-let letter = [A, a, E, e, I, i, O, o, U, u]
-function vowelCounter(strVowelNum) {
-  const myArr = strVowelNum.split(""); 
-  for (i=0, i<= strVowelNum.length, i++)
-  return 
+// let letter = [A, a, E, e, I, i, O, o, U, u]
+function vowelCounter() {
+//   const myArr = strVowelNum.split(""); 
+//   for (i=0, i<= strVowelNum.length, i++)
+//   return 
 }
-console.log(vowelCounter())
+// console.log(vowelCounter())
 
 
 
