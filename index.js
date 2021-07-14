@@ -19,6 +19,10 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18;
+if (votingAge >= 18){
+  console.log(true);
+}
 
 
 
@@ -32,6 +36,13 @@ Do the following:
 
    HINT: no function required
 */
+let  number1 = 10;
+let number2 = 20;
+function changeNumber() {
+  if(number1 < number2) {
+    return number1 + 10;
+  }
+}
 
 
 
@@ -47,8 +58,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let text = "1999";
+let integer = parseInt(text);
+console.log(integer);
 
 
 /*
@@ -59,9 +71,8 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
 
 
@@ -108,10 +119,28 @@ Puppies less than 1 year
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
+let dogWeight = 0;
+let dogAge = 0;
+function hungryDog(dogWeight, dogAge){
+  if (dogAge >1){
+    if (dogWeight <= 5){
+      return  dogWeight *0.05;
+    } if (dogWeight <= 6 && dogWeight <= 10){
+      return dogWeight * 0.04;
+    } if (dogWeight <= 11 && dogWeight <=15){
+      return dogWeight * 0.03;
+    } if (dogWeight >= 15){
+      return dogWeight * 0.02;
+    }
+  } else if(dogAge <= 1/6 && dogAge <= 1/3){
+    return dogWeight * 0.1;
+  } if(dogAge < 1/3 && dogAge < 7/12){
+    return dogWeight * 0.05;
+  } if(dogAge <= 7/12 && dogAge < 1){
+    return dogWeight * 0.04;
+  } 
+  console.log(`Task 3`, lbs (15, 1));
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
 
 
 
@@ -136,15 +165,14 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-// let computer = Math.random();
-// if(computer<=0.33){
-//   computer = 'rock';
-// }else if (computer <=0.67){
-//   computer = 'paper';
-// }else (computer > 0.67)
-//   computer = 'scissors';
+let computer = Math.random();
+if(computer<=0.33){
+  computer = 'rock';
+}else if (computer <=0.67){
+  computer = 'paper';
+}else (computer > 0.67)
+  computer = 'scissors';
  
-
 function game(user, computer){
   if(user ===computer){
     return `it's a tie`;
@@ -167,14 +195,14 @@ console.log(`task4`, game(`rock`, `computer`));
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
 function miles(km){
   return km * 0.621371;
 }
-console.log(miles())
+console.log(`Task 5`, miles())
 
 
 
@@ -186,9 +214,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm * 0.0328084;
 }
+console.log(`Task 5b`, feet())
 
 
 
@@ -203,11 +232,10 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(){
-//   for(let i = number; i > 0; i--){
-//     // return number + "bottle of soda"
-//     return `${number} bottles of soda on the wall, ${i} bottles of soda, takes one pass it around ${number - 1} bottles of soda on the wall`;
-//   }
-// }
+  for(let i = number; i > 0; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, takes one pass it around ${i- 1} bottles of soda on the wall`;
+  }
+}
 console.log(`task6`, annoyingSong(99));
 
 
